@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Twitter</title>
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container top">
+      <ul id="header_menu">
+        <li>
+          <a class="header_menu_home" href="#"><span class="header_menu_icon"><i class="fas fa-home"></i></span><span
+              class="header_menu_text">ホーム</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="header_menu_icon"><i class="fas fa-bolt"></i></span><span
+              class="header_menu_text">モーメント</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="header_menu_icon"><i class="far fa-bell"></i></span><span
+              class="header_menu_text">通知</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="header_menu_icon"><i class="far fa-envelope"></i></span><span
+              class="header_menu_text">メッセージ</span></a>
+        </li>
+        <li>
+          <div class="header_bird">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </li>
+      </ul>
+      <form class="keyword_text" action="index.html" method="post">
+        <input type="text" name="keyword" placeholder="キーワード検索">
+        <button type="submit" id="search_button">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <div id="header_tweet">
+        <a href="#"><img src="img/icon.jpg"></a>
+        <form class="tweet_button" action="index.html" method="post">
+          <input type="submit" name="tweet" value="ツイート">
+        </form>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <div class="container clearfix">
+      <div id="left">
+        <div id="profile_img">
+          <a href="#"><img src="img/icon.jpg"></a>
+        </div>
+        <div class="white_box" id="profile">
+          <h1><a href="">nakamoto</a></h1>
+          <p><a href="">@username</a></p>
+        </div>
+        <div class="white_box" id="profile_numbers">
+          <ul id="numbers">
+            <li>
+              <a href="#">ツイート<p>533</p></a>
+            </li>
+            <li>
+              <a href="#">フォロー<p>49</p></a>
+            </li>
+            <li>
+              <a href="#">フォロワー<p>2487</p></a>
+            </li>
+          </ul>
+        </div>
+        <div class="white_box" id="trend">
+          <div class="box_container">
+            <h1>おすすめトレンド<a href="#">変更する</a></h1>
+            <ul id="trend_lists">
+              <li>
+                <a href="#"><span>#全国統一防災模試</span>
+                  <h2>「全国統一防災模試」実施中！あなたの防災力を試そう（3/31まで）</h2>
+                </a>
+              </li>
+              <li>
+                <a href="#"><span>東日本大震災</span>
+                  <p>東日本大震災から7年</p>
+                </a>
+              </li>
+              <li>
+                <a href="#"><span>#いま応援できること</span>
+                  <p>51,854件のツイート</p>
+                </a>
+              </li>
+              <li>
+                <a href="#"><span>#検索は応援になる</span>
+                  <p>61,438件のツイート</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="right">
+        <div class="white_box" id="user">
+          <div class="box_container">
+            <h1>おすすめユーザー<a href="#">更新</a><a href="#">すべて見る</a></h1>
+            <ul id="user_lists">
+              <li>
+                <a href="#"><img src="img/usericon1.jpg"><span>東京都交通局</span>
+                  <p>@toeikotsu</p>
+                </a>
+                <form class="follow_button" action="index.html" method="post">
+                  <input type="submit" name="follow" value="フォローする">
+                </form>
+              </li>
+              <li>
+                <a href="#"><img src="img/usericon2.png"><span>NHK</span>
+                  <p>@nhk</p>
+                </a>
+                <form class="follow_button" action="index.html" method="post">
+                  <input type="submit" name="follow" value="フォローする">
+                </form>
+              </li>
+              <li>
+                <a href="#"><img src="img/usericon3.jpg"><span>Google</span>
+                  <p>@Google</p>
+                </a>
+                <form class="follow_button" action="index.html" method="post">
+                  <input type="submit" name="follow" value="フォローする">
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="white_box" id="find_friends">
+          <a href="#"><i class="fas fa-users"></i>
+            <p>知り合いを見つけましょう</p>
+          </a>
+        </div>
+        <div class="white_box" id="links">
+          <div class="box_container">
+            <p>© 2018 Twitter</p>
+            <a href="#">Twitterについて</a>
+            <a href="#">ヘルプセンター</a>
+            <a href="#">規約プライバシー</a>
+            <a href="#">ポリシー</a>
+            <a href="#">クッキー</a>
+            <a href="#">広告について</a>
+            <a href="#">ブランド</a>
+            <a href="#">ブログ</a>
+            <a href="#">ステータス</a>
+            <a href="#">アプリ連携</a>
+            <a href="#">採用情報</a>
+            <a href="#">マーケティング</a>
+            <a href="#">広告掲載方法</a>
+            <a href="#">開発者</a>
+          </div>
+          <div class="white_box" id="advertisements">
+            <a href="#"><i class="fas fa-external-link-alt"></i>
+              <p>Twitter広告</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="middle">
+        <div id="tweet_form">
+          <div class="tweet_form_container">
+            <img src="img/icon.jpg">
+            <textarea name="tweet_form" rows="1" placeholder="いまどうしてる？"></textarea>
+            <a href="#"><i class="far fa-image"></i></a>
+          </div>
+        </div>
+
+        <div class="tweet_box" id="tweet_lists">
+          <ul id="tweets">
+            <li>
+              <a href="#"><img src="img/icon.jpg">nakamoto<p>@username</p></a>
+              <div class="tweets_container">
+                <p>うぇい。</p>
+              </div>
+              <div class="retweets">
+                <ul>
+                  <li>
+                    <a href="#" class="comment"><i class="far fa-comment"></i> 453</a>
+                  </li>
+                  <li>
+                    <a href="#" class="retweet"><i class="fas fa-retweet"></i> 28093</a>
+                  </li>
+                  <li>
+                    <a href="#" class="heart"><i class="far fa-heart"></i> 333245</a>
+                  </li>
+                  <li>
+                    <a href="#" class="envelope"><i class="far fa-envelope"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <a href="#"><img src="img/usericon2.png"><span>NHK</span>
+                <p>@nhk</p>
+              </a>
+              <div class="tweets_container">
+                <p>めっちゃ美味しかった！！！</p>
+                <div class="tweet_img">
+                </div>
+              </div>
+              <div class="retweets">
+                <ul>
+                  <li>
+                    <a href="#" class="comment"><i class="far fa-comment"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="retweet"><i class="fas fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="heart"><i class="far fa-heart"></i> 2</a>
+                  </li>
+                  <li>
+                    <a href="#" class="envelope"><i class="far fa-envelope"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="img/usericon2.png"><span>NHK</span>
+                <p>@nhk</p>
+              </a>
+              <div class="tweets_container">
+                <p>お腹すいた。。。</p>
+              </div>
+              <div class="retweets">
+                <ul>
+                  <li>
+                    <a href="#" class="comment"><i class="far fa-comment"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="retweet"><i class="fas fa-retweet"></i> 1</a>
+                  </li>
+                  <li>
+                    <a href="#" class="heart"><i class="far fa-heart"></i> 3</a>
+                  </li>
+                  <li>
+                    <a href="#" class="envelope"><i class="far fa-envelope"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="img/usericon3.jpg"><span>Google</span>
+                <p>@Google</p>
+              </a>
+              <div class="tweets_container">
+                <p>tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet
+                  tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet </p>
+              </div>
+              <div class="retweets">
+                <ul>
+                  <li>
+                    <a href="#" class="comment"><i class="far fa-comment"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="retweet"><i class="fas fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="heart"><i class="far fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="envelope"><i class="far fa-envelope"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="img/usericon3.jpg"><span>Google</span>
+                <p>@Google</p>
+              </a>
+              <div class="tweets_container">
+                <p>tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet
+                  tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet </p>
+              </div>
+              <div class="retweets">
+                <ul>
+                  <li>
+                    <a href="#" class="comment"><i class="far fa-comment"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="retweet"><i class="fas fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="heart"><i class="far fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="envelope"><i class="far fa-envelope"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="img/usericon3.jpg"><span>Google</span>
+                <p>@Google</p>
+              </a>
+              <div class="tweets_container">
+                <p>tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet
+                  tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet </p>
+              </div>
+              <div class="retweets">
+                <ul>
+                  <li>
+                    <a href="#" class="comment"><i class="far fa-comment"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="retweet"><i class="fas fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="heart"><i class="far fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="envelope"><i class="far fa-envelope"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="img/usericon3.jpg"><span>Google</span>
+                <p>@Google</p>
+              </a>
+              <div class="tweets_container">
+                <p>tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet
+                  tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet </p>
+              </div>
+              <div class="retweets">
+                <ul>
+                  <li>
+                    <a href="#" class="comment"><i class="far fa-comment"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="retweet"><i class="fas fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="heart"><i class="far fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="envelope"><i class="far fa-envelope"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="img/usericon3.jpg"><span>Google</span>
+                <p>@Google</p>
+              </a>
+              <div class="tweets_container">
+                <p>tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet
+                  tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet </p>
+              </div>
+              <div class="retweets">
+                <ul>
+                  <li>
+                    <a href="#" class="comment"><i class="far fa-comment"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="retweet"><i class="fas fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="heart"><i class="far fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="envelope"><i class="far fa-envelope"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#"><img src="img/usericon3.jpg"><span>Google</span>
+                <p>@Google</p>
+              </a>
+              <div class="tweets_container">
+                <p>tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet
+                  tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet tweet </p>
+              </div>
+              <div class="retweets">
+                <ul>
+                  <li>
+                    <a href="#" class="comment"><i class="far fa-comment"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="retweet"><i class="fas fa-retweet"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="heart"><i class="far fa-heart"></i></a>
+                  </li>
+                  <li>
+                    <a href="#" class="envelope"><i class="far fa-envelope"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

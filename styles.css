@@ -1,0 +1,588 @@
+@charset "utf-8";
+/*common 大画面*/
+
+.container{
+  width:1190px;
+/* containerを真ん中に配置 */
+  margin:0 auto;
+  position:relative;
+}
+
+/* header */
+header{
+  background:#ffffff;
+  height:48px;
+  border-bottom:solid 1px rgba(0,0,0,.25);
+  position: fixed;
+  z-index: 1;
+  width:100%;
+}
+ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+ul#header_menu{
+/* inline-boxの隙間をなくすために、aでfontsizeを規定 */
+  font-size:0;
+  display:inline-block;
+}
+/* inline要素にして横並びにする */
+ul#header_menu > li{
+  display:inline-block;
+}
+ul#header_menu > li >a{
+  font-size:13px;
+  font-weight:bold;
+  color:#66757f;
+  padding:0 14px 0 4px;
+  /* 文字の周りの余白もリンクにしたいので、inline要素にして幅と高さはここで規定 */
+  display:inline-block;
+  height:46px;
+  /* 行ボックスの高さをheightに合わせて、文字を上下中央寄せ */
+  line-height:46px;
+  text-decoration:none;
+  text-align:center;
+}
+ul#header_menu > li >a:hover{
+  color:#1da1f2;
+  transition:all 0.15s ;
+  border-bottom:solid 2px #1da1f2;
+}
+/* homeだけ常に青色 */
+ul#header_menu .header_menu_home{
+  color:#1da1f2;
+  border-bottom:solid 2px #1da1f2;
+}
+/* 各アイコン */
+ul#header_menu > li >a>span.header_menu_icon{
+  font-size: 19px;
+  display:inline-block;
+  margin-right: 3px;
+  padding-left:4px;
+  vertical-align:-2px;
+}
+ul#header_menu .header_bird i{
+  font-size:20px;
+  color:#1da1f2;
+  position:absolute;
+  left:49%;
+  top:13px;
+}
+/* 検索欄 */
+.keyword_text {
+  position:absolute;
+  top:8px;
+  right:150px;
+}
+.keyword_text input::-webkit-input-placeholder {
+  padding-left:8px;
+}
+.keyword_text input{
+  width:221px;
+  height:32px;
+  border:solid #e6ecf0 1px;
+  border-radius:21px;
+  background:#f5f8fa;
+  font-size: 12px;
+}
+.keyword_text input:focus{
+  background:#ffffff;
+  color:#14171a;
+  border:#1da1f2 solid 2px;
+}
+#search_button{
+  background-color:transparent;
+  border-style:none;
+  position:absolute;
+  font-size: 20px;
+  color:#66757f;
+  top:23%;
+  right:3px;
+}
+#search_button:hover{
+  cursor:pointer;
+}
+/* アイコンとツイートボタン */
+div#header_tweet{
+  display:inline-block;
+  float:right;
+  width:140px;
+  height:48px;
+  position:relative;
+}
+
+#header_tweet img{
+  height:70%;
+  border:solid #e6ecf0 1px;
+  border-radius: 50%;
+  position:absolute;
+  top:17%;
+
+}
+form.tweet_button{
+  display:inline-block;
+  position:absolute;
+  top:20%;
+  right:0;
+}
+form.tweet_button input{
+  width:90px;
+  height:34px;
+  border-radius: 100px;
+  background:#4ab3f4;
+  color:#ffffff;
+  font-size:14px;
+  font-weight:bold;
+  text-align:center;
+}
+form.tweet_button input:hover{
+  background-color:#1da1f2;
+  cursor:pointer;
+}
+
+
+/* main */
+main{
+  background:#E5ECF1;
+}
+#left{
+  width:290px;
+  height:745px;
+  background:#E5ECF1;
+  float:left;
+  /* headerをfixedにしたことによるズレ解消 */
+  margin-top:56px;
+}
+#right{
+  width:290px;
+  height:566px;
+  background:#E5ECF1;
+  float:right;
+ margin-top:56px;
+}
+#middle{
+  width:586px;
+  margin:56px 12px 0;
+ float:left;
+}
+.clearfix::after{
+  content:'';
+  display:block;
+  clear:both;
+}
+/* 白いボックス */
+.white_box{
+    width:100%;
+    background:#ffffff;
+}
+.box_container{
+  width:258px;
+  margin:0 auto;
+  padding:10px 0;
+}
+ /* main_left */
+#profile_img{
+  width:100%;
+  height:95px;
+  background:url('img/profile.jpg') no-repeat ;
+  background-size:cover;
+  position:relative;
+}
+#profile_img img{
+  border-radius:50%;
+  border:solid #ffffff 2px;
+  width:72px;
+  height:72px;
+  position:absolute;
+  bottom:-40px;
+  left:10px;
+}
+#profile{
+  height:49px;
+  padding-top:10px;
+  padding-left:30%;
+  box-sizing: border-box;
+}
+#profile_numbers{
+  margin-bottom:10px;
+  height:69px;
+  padding:16px;
+  box-sizing: border-box;
+}
+#profile h1{
+  margin:0;
+  font-size:18px;
+  color:#14171a;
+}
+#profile p{
+  margin-top:5px;
+  color:#657786;
+  font-size:14px;
+}
+#profile a{
+  text-decoration:none;
+}
+#profile a:hover{
+  text-decoration:underline;
+}
+#profile h1>a:visited,#profile p>a:visited{
+  color:inherit;
+}
+#trend{
+}
+
+ul#numbers{
+  font-size:0;
+  display:inline-block;
+}
+ul#numbers >li>a{
+  font-size:12px;
+  font-weight:bold;
+  color:#66757f;
+  text-decoration: none;
+}
+ul#numbers >li>a>p{
+  color:#1da1f2;
+  font-weight:bold;
+  font-size:15px;
+  margin:0;
+  padding-top:7px;
+}
+ul#numbers >li>a:hover{
+  color:#1da1f2;
+  transition:all 0.15s ;
+}
+ul#numbers >li{
+    display:inline-block;
+    width:85px;
+}
+/* おすすめトレンド */
+#trend h1{
+  font-size:18px;
+  margin:0;
+}
+#trend h1>a{
+  color:#1da1f2;
+  text-decoration: none;
+  font-size:12px;
+  font-weight:normal;
+  margin-left:10px;
+}
+#trend h1>a:hover{
+  text-decoration:underline;
+}
+
+ul#trend_lists li{
+  padding:7px;
+}
+ul#trend_lists li>a{
+  text-decoration: none;
+  font-size:14px;
+  color:#1da1f2;
+  font-weight:bold;
+}
+ul#trend_lists li>a>span:hover{
+  text-decoration: underline;
+}
+ul#trend_lists li>a>h2{
+  margin:0;
+  padding:0;
+  font-size:14px;
+  font-weight:normal;
+  color:#14171a;
+}
+ul#trend_lists li>a>p{
+  margin:1px 0 0 0;
+  padding:0;
+  font-size:12px;
+  font-weight:normal;
+  color:#657786;
+}
+
+/* main_right */
+#user h1{
+  font-size:18px;
+  margin:0;
+}
+#user h1>a{
+  color:#1da1f2;
+  text-decoration: none;
+  font-size:12px;
+  font-weight:normal;
+  margin-left:10px;
+}
+ul#user_lists li{
+  padding:10px;
+  position:relative;
+}
+ul#user_lists li:not(:last-child){
+  margin-bottom:5px;
+  border-bottom:solid #e6ecf0 1px;
+}
+ul#user_lists li>a{
+  text-decoration: none;
+  font-size:14px;
+  color:#14171a;
+  font-weight:bold;
+}
+ul#user_lists li>a:hover{
+  text-decoration: underline;
+  color:#1da1f2;
+}
+ul#user_lists li>a>p{
+  display:inline-block;
+  margin-left:5px;
+  margin-top:0;
+  font-weight:normal;
+  color:#657786;
+}
+ul#user_lists li>a>img{
+  width:48px;
+  height:48px;
+  border-radius: 50%;
+  vertical-align: top;
+  margin-right:5px;
+}
+form.follow_button{
+  position:absolute;
+  bottom:7px;
+  left:59px;
+}
+form.follow_button input{
+  width:98px;
+  height:27px;
+  border-radius:100px;
+  border:solid 1px #1da1f2;
+  font-size:12px;
+  color:#1da1f2;
+  font-weight:bold;
+}
+form.follow_button input:hover{
+  cursor:pointer;
+  background-color:#e8f5fd;
+}
+#find_friends,#advertisements{
+    border-top:solid #e6ecf0 1px;
+  margin-bottom:10px;
+  padding:10px;
+  box-sizing: border-box;
+}
+#find_friends a{
+  font-size:12px;
+  color:#1da1f2;
+  text-decoration: none;
+}
+#find_friends p{
+  display:inline-block;
+  margin:10px;
+}
+#find_friends p:hover{
+  text-decoration: underline;
+}
+/* links */
+#links >.box_container>p{
+  margin:0;
+  padding:0;
+  font-size:12px;
+  display:inline-block;
+  color:#657786;
+}
+#links a{
+  text-decoration: none;
+  font-size:12px;
+  color:#657786;
+}
+#links a:hover{
+  text-decoration: underline;
+  color:#1da1f2;
+}
+#advertisements a{
+  font-size:12px;
+  color:#1da1f2;
+  text-decoration: none;
+}
+#advertisements p{
+  display:inline-block;
+  margin:10px;
+}
+#advertisements p:hover{
+  text-decoration: underline;
+}
+
+/* middle */
+#tweet_form{
+  width:100%;
+  background:#e8f5fd;
+  padding-left:20px;
+  box-sizing: border-box;
+}
+.tweet_form_container{
+  width:566px;
+  margin:0 auto;
+  padding:10px 0;
+  position:relative;
+    border-bottom:solid #e6ecf0 1px;
+}
+#middle .tweet_form_container>img{
+  width:32px;
+  height:32px;
+  border-radius: 50%;
+  position:absolute;
+  top:13px;
+}
+#middle textarea{
+  width:506px;
+  height:36px;
+  border-radius:8px;
+  border:1px solid #C0E7FE;
+  margin-left:42px;
+
+
+}
+#middle textarea::-webkit-input-placeholder{
+   padding-left:9px;
+    color: #1DA1F2;
+    font-size:14px;
+    line-height: 36px;
+}
+#middle textarea:focus{
+  height:80px;
+  border-radius:8px;
+  border:1px solid #C0E7FE;
+}
+#middle textarea:focus::-webkit-input-placeholder{
+    color: #e6ecf0;
+
+}
+.tweet_form_container>a{
+  float:right;
+  position:absolute;
+  right:25px;
+  color:#1DA1F2;
+  line-height: 36px;
+}
+
+.tweet_box{
+  width:100%;
+  background: #ffffff;
+  border-bottom:solid #e6ecf0 1px;
+  position:relative;
+}
+
+ul#tweets>li{
+  padding:30px 10px 0px 65px;
+  position:relative;
+}
+ul#tweets>li:hover{
+  cursor:pointer;
+  background-color:#f5f8fa;
+}
+ul#tweets>li:not(:last-child){
+  border-bottom:solid #e6ecf0 1px;
+}
+ul#tweets>li>a{
+  text-decoration: none;
+  font-size:14px;
+  color:#14171a;
+  font-weight:bold;
+  position:absolute;
+  top:10px;
+  left:10px;
+  height:16px;
+}
+ul#tweets>li>a:hover{
+  text-decoration: underline;
+  color:#1da1f2;
+}
+ul#tweets li>a>p{
+  display:inline-block;
+  margin-left:5px;
+  margin-top:0;
+  font-weight:normal;
+  color:#657786;
+}
+ul#tweets li>a>img{
+  width:48px;
+  height:48px;
+  border-radius: 50%;
+  vertical-align: top;
+  margin-right:5px;
+}
+.tweets_container{
+  width:506px;
+}
+.tweets_container p{
+  margin:0;
+  padding:0;
+  font-size:14px;
+}
+.tweet_img{
+  margin-top:10px;
+  width:506px;
+  height:506px;
+  background:url('img/hamburg.jpg');
+  background-size:cover;
+  background-position: center;
+  border-radius:5px;
+}
+.retweets>ul{
+  font-size:10px;
+}
+.retweets>ul>li{
+  display:inline-block;
+  width:80px;
+  padding-right:10px;
+}
+.retweets>ul>li>a{
+  font-size:14px;
+  height:40px;
+  line-height:40px;
+  text-decoration:none;
+  text-align:center;
+
+  color:#657786;
+}
+.comment:hover{
+  color:#1da1f2;
+}
+.retweet:hover{
+  color:#17bf63;
+}
+.heart:hover{
+  color:#e0245e;
+}
+.envelope:hover{
+  color:#1da1f2;
+}
+
+/* medium 1230以下になると読み込まれる*/
+@media(max-width: 1230px){
+#right{
+  display:none;
+}
+.container{
+  width:900px;
+}
+}
+/* small 940以下になると読み込まれる*/
+@media(max-width: 940px){
+  .header_menu_text{
+    display:none;
+  }
+  .keyword_text input{
+    width:139px;
+  }
+  .top{
+    width:90%;
+    margin:0 auto;  }
+}
+@media(max-width: 940px){
+  .keyword_text input{
+    width:89px;
+  }
+.top{
+    width:700;
+    margin:0 auto;  }
+  }
+/* d */
